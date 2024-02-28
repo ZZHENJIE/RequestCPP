@@ -1,0 +1,8 @@
+build
+bin
+include
+lib
+Main.c
+Main.cpp
+CMakeLists.txt
+.vscode

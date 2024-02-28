@@ -23,7 +23,6 @@ namespace Request{
             CURLcode Request(const char * Url,void * UserData);
         private:
             CURL * CurlHandle;
-            bool IsRequest;
             SetOptions * OptionsFunction;
             Memory MemoryObj;
     };
