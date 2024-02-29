@@ -18,8 +18,8 @@ namespace Request{
         public:
             Instance();
             ~Instance();
-            inline Memory GetData(){return this->MemoryObj;};
             void SetOptionsFunction(SetOptions Function);
+            Memory GetData();
             CURLcode Request(const char * Url,void * UserData);
         private:
             CURL * CurlHandle;

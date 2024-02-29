@@ -16,7 +16,7 @@ size_t Write_Callback(void * Ptr, size_t Size, size_t Nmemb, void * Userdata){
 
     char * NewData = (char *)realloc(NULL,MemoryObj->Size + Realsize + 1);
     if (MemoryObj->Data == NULL){
-        fprintf(stderr,"realloc() Failed!\n");
+        perror("realloc() Failed!\n");
         return 0;
     }else{
         memcpy(NewData,MemoryObj->Data,MemoryObj->Size);
@@ -29,6 +29,10 @@ size_t Write_Callback(void * Ptr, size_t Size, size_t Nmemb, void * Userdata){
     MemoryObj->Data[MemoryObj->Size] = 0;
 
     return Realsize;
+}
+
+Memory Instance::GetData(){
+    return this->MemoryObj;
 }
 
 Instance::Instance(){
