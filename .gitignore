@@ -1,5 +1,4 @@
 build
 Main.c
 Main.cpp
-CMakeLists.txt
 .vscode
